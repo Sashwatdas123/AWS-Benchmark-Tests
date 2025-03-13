@@ -1,0 +1,12 @@
+To Run concurrent test:
+    1. Install boto3 first:
+        -pip install boto3
+    2. Run the following commands in the terminal for invoking concurrently:
+        -# for installing required modules
+        - pip install -r requirements.txt  
+
+        # for running the code
+        - python invoke_concurrently.py --function_arn arn:aws:lambda:region:account-id:function:function-name --concurrent_users 10 --duration 60  # change the value of concurrent_users to desired number of users.
+
+        # to save to CSV file:
+        - python invoke_concurrently.py --function_arn arn:aws:lambda:region:account-id:function:function-name --concurrent_users 10 --duration 60 --output_file output.csv
